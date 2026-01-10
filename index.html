@@ -16,31 +16,32 @@
             <button onclick="showPage('dictionary')">Dictionary</button>
             <button onclick="showPage('quiz')">Quiz</button>
         </div>
-        <button class="btn-login" onclick="showPage('login')">Login</button>
+        <button class="btn-login" onclick="showPage('login')">Join Club</button>
     </nav>
 
     <div id="home" class="page active">
         <div class="hero">
             <h1>Learn Faster. <span>Think Smarter.</span></h1>
             <p>The premium educational hub for vocabulary, science, and linguistics.</p>
+            <button class="btn-primary" onclick="showPage('learn')">Start Exploring</button>
         </div>
     </div>
 
     <div id="learn" class="page">
         <div class="container">
-            <h2 class="section-title">Vocabulary Booster</h2>
+            <h2 class="section-title">Vocabulary Booster 📖</h2>
             <div id="vocab-list" class="grid"></div>
             <div class="btn-container">
-                <button id="load-more-btn" class="btn-secondary" onclick="loadMoreVocab()">Load More Words</button>
+                <button id="load-more-btn" class="btn-secondary" onclick="loadMoreVocab()">Show More Words</button>
             </div>
         </div>
     </div>
 
     <div id="dictionary" class="page">
         <div class="container">
-            <h2 class="section-title">Visual Dictionary</h2>
+            <h2 class="section-title">Visual Dictionary 🔍</h2>
             <div class="search-bar">
-                <input type="text" id="dictInput" placeholder="Enter a word (e.g. Science, Space)..." onkeydown="if(event.key==='Enter') fetchWord()">
+                <input type="text" id="dictInput" placeholder="Search (e.g. Science, Space, Lion)..." onkeydown="if(event.key==='Enter') fetchWord()">
                 <button class="btn-primary" onclick="fetchWord()">Search</button>
             </div>
             <div id="dictResult"></div>
@@ -50,7 +51,7 @@
     <div id="quiz" class="page">
         <div class="container">
             <div class="quiz-card">
-                <div id="quiz-header">Score: <span id="score">0</span></div>
+                <div id="quiz-header">Level: 1 | <span id="score">Score: 0</span></div>
                 <hr>
                 <div id="quiz-body"></div>
             </div>
@@ -59,9 +60,8 @@
 
     <div id="login" class="page">
         <div class="auth-box">
-            <h2>Welcome Back</h2>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <h2>Explorer Access</h2>
+            <input type="text" id="user-entry" placeholder="Hero Name">
             <button class="btn-primary" onclick="showPage('home')">Sign In</button>
         </div>
     </div>

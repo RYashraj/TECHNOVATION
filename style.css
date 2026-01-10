@@ -1,5 +1,5 @@
 :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; --text: #334155; }
-body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--text); overflow-x: hidden; }
+body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--text); }
 
 .top-nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: white; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--dark); }
@@ -7,26 +7,24 @@ body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); co
 .menu button { background: none; border: none; font-weight: 600; margin: 0 10px; cursor: pointer; color: var(--text); font-family: inherit; }
 
 .page { display: none; padding: 60px 5%; min-height: 80vh; }
-.page.active { display: block; animation: fadeIn 0.3s ease; }
+.active { display: block; animation: fadeIn 0.3s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .container { max-width: 1000px; margin: 0 auto; text-align: center; }
-.section-title { font-size: 2rem; margin-bottom: 30px; color: var(--dark); }
+.section-title { font-size: 2rem; color: var(--dark); }
 
 .search-bar { display: flex; gap: 10px; margin-bottom: 40px; justify-content: center; }
-input { padding: 14px 20px; border-radius: 8px; border: 1px solid #cbd5e1; width: 350px; outline: none; font-size: 16px; }
+input { padding: 14px 20px; border-radius: 8px; border: 1px solid #cbd5e1; width: 350px; font-size: 16px; }
 .btn-primary { background: var(--primary); color: white; border: none; padding: 14px 30px; border-radius: 8px; cursor: pointer; font-weight: 600; }
-.btn-secondary { background: white; color: var(--primary); border: 2px solid var(--primary); padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 20px; }
 
-.result-box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap; }
-.result-info { flex: 1; min-width: 300px; }
-.result-img { width: 250px; height: 250px; object-fit: cover; border-radius: 12px; background: #eee; }
+.result-box { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: left; display: flex; gap: 30px; align-items: center; }
+.result-info { flex: 1; }
+.result-img { width: 300px; height: 300px; object-fit: cover; border-radius: 12px; background: #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; text-align: left; transition: transform 0.2s; }
-.card:hover { transform: translateY(-5px); }
-.pronounce-tag { font-size: 0.9rem; color: var(--primary); font-weight: 600; background: #eff6ff; padding: 2px 8px; border-radius: 4px; display: inline-block; margin: 5px 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: left; }
+.card { background: white; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; }
+.pronounce-tag { font-size: 0.85rem; color: var(--primary); font-weight: 700; background: #eff6ff; padding: 4px 10px; border-radius: 6px; display: inline-block; margin: 8px 0; }
 
-.quiz-card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 600px; margin: 0 auto; }
+.quiz-card { background: white; padding: 40px; border-radius: 16px; max-width: 600px; margin: 0 auto; }
 .opt { display: block; width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #e2e8f0; border-radius: 8px; background: white; cursor: pointer; text-align: left; font-size: 16px; }
-.opt:hover { background: #f1f5f9; }
+.btn-secondary { background: white; border: 2px solid var(--primary); color: var(--primary); padding: 12px 30px; border-radius: 8px; font-weight: 700; cursor: pointer; margin-top: 20px;}
