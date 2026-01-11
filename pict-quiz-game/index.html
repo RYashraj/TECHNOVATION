@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidsnation | Learning Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="logo">Lexi<span>Kids</span></div>
+        <div class="menu">
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('learn')">Learn</button>
+            <button onclick="showPage('dictionary')">Dictionary</button>
+            <button onclick="showPage('quiz')">Quiz</button>
+        </div>
+        <button class="btn-login" onclick="showPage('login')">Join Club</button>
+    </nav>
+
+    <div id="home" class="page active">
+        <div class="hero">
+            <h1>Learn Faster. <span>Think Smarter.</span></h1>
+            <p>The premium educational hub for vocabulary, science, and linguistics.</p>
+            <button class="btn-primary" onclick="showPage('learn')">Start Exploring</button>
+        </div>
+    </div>
+
+    <div id="learn" class="page">
+        <div class="container">
+            <h2 class="section-title">Vocabulary Booster 📖</h2>
+            <div id="vocab-list" class="grid"></div>
+            <div class="btn-container">
+                <button id="load-more-btn" class="btn-secondary" onclick="loadMoreVocab()">Show More Words</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="dictionary" class="page">
+        <div class="container">
+            <h2 class="section-title">Visual Dictionary 🔍</h2>
+            <div class="search-bar">
+                <input type="text" id="dictInput" placeholder="Search (e.g. Science, Space, Lion)..." onkeydown="if(event.key==='Enter') fetchWord()">
+                <button class="btn-primary" onclick="fetchWord()">Search</button>
+            </div>
+            <div id="dictResult"></div>
+        </div>
+    </div>
+
+    <div id="quiz" class="page">
+        <div class="container">
+            <div class="quiz-card">
+                <div id="quiz-header">Level: 1 | <span id="score">Score: 0</span></div>
+                <hr>
+                <div id="quiz-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="login" class="page">
+        <div class="auth-box">
+            <h2>Explorer Access</h2>
+            <input type="text" id="user-entry" placeholder="Hero Name">
+            <button class="btn-primary" onclick="showPage('home')">Sign In</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
