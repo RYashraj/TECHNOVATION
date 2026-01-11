@@ -12,7 +12,7 @@
         <div class="logo">Lexi<span>Kids</span></div>
         <div class="menu">
             <button onclick="showPage('home')">Home</button>
-            <button onclick="showPage('learn')">Learn</button>
+            <button onclick="showPage('words')">Words of the Day</button>
             <button onclick="showPage('dictionary')">Dictionary</button>
             <button onclick="showPage('quiz')">Quiz</button>
         </div>
@@ -23,19 +23,21 @@
         <div class="hero">
             <h1>Learn Faster. <span>Think Smarter.</span></h1>
             <p>The premium educational hub for vocabulary, science, and linguistics.</p>
-            <button class="btn-primary" onclick="showPage('learn')">Start Exploring</button>
+            <button class="btn-primary" onclick="showPage('words')">Start Exploring</button>
         </div>
     </div>
 
-    <div id="learn" class="page">
+    <div id="words" class="page">
         <div class="container">
-            <h2 class="section-title">Vocabulary Booster 📖</h2>
-            <div id="vocab-list" class="grid"></div>
+            <h2 class="section-title">Words of the Day</h2>
+            <div id="words-loader" class="loader-box"></div>
+            <div id="words-list" class="grid"></div>
             <div class="btn-container">
-                <button id="load-more-btn" class="btn-secondary" onclick="loadMoreVocab()">Show More Words</button>
+                <button id="words-more-btn" class="btn-secondary">Show More</button>
             </div>
         </div>
     </div>
+
 
     <div id="dictionary" class="page">
         <div class="container">
